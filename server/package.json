@@ -1,0 +1,22 @@
+{
+  "name": "SemouleChatServer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app-copy.js",
+    "build": "node app.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.1",
+    "mongoose": "^5.6.10",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "*"
+  },
+  "author": "Mattèo Gauthier <matteo.gauthier@gmail.com>",
+  "license": "ISC"
+}
