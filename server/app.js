@@ -14,7 +14,7 @@ function currentTime() {
 }
 
 mongo.connect((err, client) => {
-    // console.log(err ? console.log(err) : currentTime() + " mongodb connected")
+    console.log(err ? console.log(err) : currentTime() + " mongodb connected")
     // console.log(db)
 
     io.on("connection", socket => {
@@ -49,7 +49,7 @@ mongo.connect((err, client) => {
             let name = socket.username
             let message = data
 
-            chat.insert({ username: name, msg: message }, function(err, result) {
+            chat.insertOne({ username: name, msg: message }, function(err, result) {
                 result = result.ops[0]
                 messages.push(result)
                 io.emit("msg", result)
